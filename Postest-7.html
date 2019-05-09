@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>InputOutput</title>
+    </head>
+    <body>
+        <script language="Javascript">
+            function hitungIndex() {
+                var quis = (document.fform.iquis.value);
+                var tugas = (document.fform.itugas.value);
+                var uts = (document.fform.iuts.value);
+                var uas = (document.fform.iuas.value);
+
+                var qquis = quis * 0.1;
+                var qtugas = tugas * 0.2;
+                var quts = uts * 0.3;
+                var quas = uas * 0.4;
+                var qtotal = qquis+qtugas+quts+quas;
+
+                var index = "";
+                var keterangan = "";
+
+                if (qtotal >= 80 ) {
+                    index = "A";
+                    keterangan = "Sangat Bagus";
+                }else if (qtotal >= 70) {
+                    index = "B";
+                    keterangan = "Bagus";
+                }else if (qtotal >= 60) {
+                    index = "C";
+                    keterangan = "Cukup";
+                }else  {
+                    index = "D";
+                    keterangan = "Tidak Cukup";                    
+                }
+
+                document.fform.oindex.value = index;
+                document.fform.oketerangan.value = keterangan;
+            }
+        </script>
+        <form action="" name="fform">
+            <table border="2" align="center">
+                <tr>
+                    <td align="center">Index Prestasi</td>
+                </tr>
+                <tr>
+                    <td>Quis (10%) : <input type="text" name="iquis"></td>
+                </tr>
+                <tr>
+                    <td>Tugas (20%) : <input type="text" name="itugas"></td>
+                </tr>
+                <tr>
+                    <td>Uts (30%) : <input type="text" name="iuts"></td>
+                </tr>
+                <tr>
+                    <td>Uas (40%) : <input type="text" name="iuas"></td>
+                </tr>
+                <tr>
+                    <td align="center"><input type="button" value="Hitung" onclick="hitungIndex()"><input type="reset" value="Ulang"></td>
+                </tr>
+                <tr>
+                    <td>Index prestasi : <input type="text" name="oindex"> Keterangan : <input type="text" name="oketerangan"></td>
+                </tr>
+            </table>
+        </form>
+
+    </body>
+</html>
