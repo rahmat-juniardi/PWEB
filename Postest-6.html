@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CountJS</title>
+    </head>
+    <body>
+        <script language="Javascript">
+        function jumlah() {
+            var bil1 = parseFloat(document.fform.ibilangan1.value);
+            if (isNaN(bil1)) {
+                bil1 = 0.0;
+            }
+            var bil2 = parseFloat(document.fform.ibilangan2.value);
+            if (isNaN(bil2)) {
+                bil2 = 0.0;
+            }
+
+            var hasil = bil1 + bil2;
+            alert("Hasil : " + hasil);
+        }
+        function kurang() {
+                var bil1 = parseFloat(document.fform.ibilangan1.value);
+                if (isNaN(bil1)) {
+                    bil1 = 0.0;
+                }
+                var bil2 = parseFloat(document.fform.ibilangan2.value);
+                if (isNaN(bil2)) {
+                    bil2 = 0.0;
+                }
+
+                var hasil = bil1 - bil2;
+                alert("Hasil : " + hasil);
+        }
+        function kali() {
+                var bil1 = parseFloat(document.fform.ibilangan1.value);
+                if (isNaN(bil1)) {
+                    bil1 = 0.0;
+                }
+                var bil2 = parseFloat(document.fform.ibilangan2.value);
+                if (isNaN(bil2)) {
+                    bil2 = 0.0;
+                }
+
+                var hasil = bil1 * bil2;
+                alert("Hasil : " + hasil);
+        }
+        function bagi() {
+                var bil1 = parseFloat(document.fform.ibilangan1.value);
+                if (isNaN(bil1)) {
+                    bil1 = 0.0;
+                }
+                var bil2 = parseFloat(document.fform.ibilangan2.value);
+                if (isNaN(bil2)) {
+                    bil2 = 0.0;
+                }
+
+                var hasil = bil1 / bil2;
+                alert("Hasil : " + hasil);
+        }
+        </script>
+        <h1>Masukan Data Lewat Keyboard</h1>
+        <form action="" name="fform">
+            <table>
+                <tr>
+                    <td>Bilangan Pertama</td>
+                    <td>:</td>
+                    <td><input type="text" name="ibilangan1"></td>
+                </tr>
+                <tr>
+                    <td>Bilangan Kedua</td>
+                    <td>:</td>
+                    <td><input type="text" name="ibilangan2"></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <!-- <input type="button" name="jumlah"  value="Jumlah" onclick="jumlah()"> 
+                            Element name menjadikan onclick error/fungsi tidak terbaca -->
+                        <input type="button"  value="Jumlah" onclick="jumlah()">
+                        <input type="button" value="Kurang"onclick="kurang()">
+                        <input type="button" value="Kali" onclick="kali()">
+                        <input type="button" value="Bagi" onclick="bagi()">
+                        <br><br>
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
