@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Belajar php</title>
+  </head>
+  <body>
+      <script type="text/javascript">
+        function cekprima(value){
+          var max = Math.sqrt(value);
+          for (var i = 2; i<= max;i++) {
+            if (value % i == 0 ) {return false}
+          }
+          return true;
+        }
+
+        var angka = prompt("masukan rumus matematika");
+        var hasil = eval(angka);
+        document.write("hasil<br>");
+        document.write("Rumus matematika " + angka +"<br>");
+        document.write("hasil perhitungan " + hasil + "<br>");
+
+        if (hasil % 2 == 0) {
+          document.write(hasil + " adalah bilangan genap");
+        }else {
+          document.write(hasil + " adalah bilangan ganjil");
+        }
+
+        document.write("<br>");
+
+        if (cekprima(hasil)) {
+          document.write(hasil + " adalah bilangan prima");
+        }else{
+          document.write(hasil + " bukan bilangan prima");
+        }
+      </script>
+  </body>
+</html>
